@@ -29,6 +29,9 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
+; Highlight matching parenthesis.
+(show-paren-mode 1)
+
 ; Show full file path on the title bar
 ; ( http://www.nabble.com/How-to-full-pathname-in-modeline-td21749423.html ).
 (setq-default frame-title-format
@@ -37,9 +40,6 @@
               dired-directory
               (revert-buffer-function " %b"
               ("%b - Dir:  " default-directory))))))) 
-
-; Highlight matching parenthesis.
-(show-paren-mode 1)
 
 ; Use smooth scrolling.
 (require 'smooth-scrolling)
