@@ -17,6 +17,9 @@
 (setq color-theme-is-global t)
 (color-theme-simple-1)
 
+; Helps a bit with the shell ansi colors.
+(require 'ansi-color)
+
 ; Set current line highlighting and color.
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#333")
