@@ -41,6 +41,17 @@
               (revert-buffer-function " %b"
               ("%b - Dir:  " default-directory))))))) 
 
+; Use one global directory for backups files
+; ( http://www.emacswiki.org/emacs/BackupDirectory ).
+(setq
+   backup-by-copying t
+   backup-directory-alist
+    '(("." . "~/.emacs-backups"))
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)
+
 ; Use smooth scrolling.
 (require 'smooth-scrolling)
 (setq smooth-scroll-margin 1)
