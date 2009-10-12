@@ -1,10 +1,10 @@
 ;;;; Kimmo's Emacs configuration file.
 ; Created 11 October 2009.
 ; Move emacsconf to ~/emacs.d and create a symlink to this file with
-; ln -s ~/.emacs.d/emacsconf/emacs.cfg ~/.emacs
+; cd; ln -s .emacs.d/emacsconf/emacs.cfg .emacs
 ;
 ; Packages installed with apt:
-; css-mode gettext-el js2-mode php-mode python-mode python-rope python-ropemacs
+; emacs-snapshot-gtk emacs-goodies-el css-mode gettext-el js2-mode php-mode python-mode python-rope python-ropemacs
 ;
 ; Add custom directory to load path.
 (add-to-list 'load-path "~/.emacs.d/emacsconf/plugins")
