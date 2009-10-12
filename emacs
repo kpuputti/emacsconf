@@ -72,6 +72,12 @@
 (setq yas/root-directory "~/.emacs.d/emacsconf/mysnippets")
 (yas/load-directory yas/root-directory)
 
+; Use js2-mode and espresso for Javascript
+; ( http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode ).
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(autoload 'espresso-mode "espresso")
+
 ; Indent and clean whole buffer ( http://emacsblog.org/2007/01/17/indent-whole-buffer/ ).
 (defun iwb ()
   "indent whole buffer"
