@@ -59,6 +59,10 @@
 (require 'smooth-scrolling)
 (setq smooth-scroll-margin 1)
 
+; Load session from the directory Emacs was opened in.
+(desktop-load-default)
+(desktop-read)
+
 ; Load mode for Django templates ( http://code.djangoproject.com/wiki/Emacs )
 (require 'django-mode)
 
