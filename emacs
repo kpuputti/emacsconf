@@ -85,3 +85,5 @@
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
+
+; Right margin: http://www.emacswiki.org/emacs/MarginMode
