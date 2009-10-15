@@ -90,4 +90,6 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
-; Right margin: http://www.emacswiki.org/emacs/MarginMode
+; Right margin.
+; http://www.emacswiki.org/emacs/MarginMode
+; http://www.geocities.com/gchen275/xemacs/
