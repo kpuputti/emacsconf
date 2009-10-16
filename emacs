@@ -22,7 +22,7 @@
 
 ; Set current line highlighting and color.
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#333")
+(set-face-background 'hl-line "#111")
 
 ; Show line numbers on the left side.
 (require 'linum)
