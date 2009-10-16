@@ -4,7 +4,7 @@
 ; cd; ln -s .emacs.d/emacsconf/emacs.cfg .emacs
 ;
 ; Packages installed with apt:
-; emacs-snapshot-gtk emacs-goodies-el css-mode gettext-el js2-mode php-mode python-mode python-rope python-ropemacs
+; emacs-snapshot-gtk emacs-goodies-el css-mode gettext-el js2-mode php-mode python-mode python-rope python-ropemacs rhino
 ;
 ; Add custom directory to load path.
 (add-to-list 'load-path "~/.emacs.d/emacsconf/plugins")
