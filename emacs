@@ -179,3 +179,17 @@
 ; Right margin.
 ; http://www.emacswiki.org/emacs/MarginMode
 ; http://www.geocities.com/gchen275/xemacs/
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(js2-allow-keywords-as-property-names nil)
+ '(js2-indent-on-enter-key nil)
+ '(js2-mirror-mode nil))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
