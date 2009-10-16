@@ -170,6 +170,10 @@
 
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
+; Flymake settings.
+(require 'flymake-jslint)
+(add-hook 'js2-mode-hook
+	  (lambda () (flymake-mode t)))
 
 ; Indent and clean whole buffer ( http://emacsblog.org/2007/01/17/indent-whole-buffer/ ).
 (defun iwb ()
