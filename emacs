@@ -35,6 +35,9 @@
 ; Highlight matching parenthesis.
 (show-paren-mode 1)
 
+; Hide the tool bar with buttons.
+(tool-bar-mode -1)
+
 ; Show full file path on the title bar
 ; ( http://www.nabble.com/How-to-full-pathname-in-modeline-td21749423.html ).
 (setq-default frame-title-format
