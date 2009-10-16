@@ -59,6 +59,10 @@
 (require 'smooth-scrolling)
 (setq smooth-scroll-margin 1)
 
+; Always use spaces for indentation.
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
 ; Load session from the directory Emacs was opened in.
 (desktop-load-default)
 (desktop-read)
