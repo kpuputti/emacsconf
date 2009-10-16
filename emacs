@@ -70,6 +70,12 @@
 (desktop-load-default)
 (desktop-read)
 
+; Fix CSS mode indentation.
+(setq cssm-indent-level 4)
+(setq cssm-newline-before-closing-bracket t)
+(setq cssm-indent-function #'cssm-c-style-indenter)
+(setq cssm-mirror-mode nil)
+
 ; Load mode for Django templates ( http://code.djangoproject.com/wiki/Emacs )
 (require 'django-mode)
 
