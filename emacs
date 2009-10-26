@@ -44,22 +44,22 @@
 ; Show full file path on the title bar
 ; ( http://www.nabble.com/How-to-full-pathname-in-modeline-td21749423.html ).
 (setq-default frame-title-format
-   (list '((buffer-file-name " %f"
-             (dired-directory
-              dired-directory
-              (revert-buffer-function " %b"
-              ("%b - Dir:  " default-directory))))))) 
+              (list '((buffer-file-name " %f"
+                                        (dired-directory
+                                         dired-directory
+                                         (revert-buffer-function " %b"
+                                                                 ("%b - Dir:  " default-directory)))))))
 
 ; Use one global directory for backups files
 ; ( http://www.emacswiki.org/emacs/BackupDirectory ).
 (setq
-   backup-by-copying t
-   backup-directory-alist
-    '(("." . "~/.emacs-backups"))
-   delete-old-versions t
-   kept-new-versions 6
-   kept-old-versions 2
-   version-control t)
+ backup-by-copying t
+ backup-directory-alist
+ '(("." . "~/.emacs-backups"))
+ delete-old-versions t
+ kept-new-versions 6
+ kept-old-versions 2
+ version-control t)
 
 ; Use smooth scrolling.
 (require 'smooth-scrolling)
@@ -162,7 +162,7 @@
   (c-toggle-hungry-state 1)
   (set (make-local-variable 'indent-line-function) 'my-js2-indent-function)
   (define-key js2-mode-map [(meta control |)] 'cperl-lineup)
-  (define-key js2-mode-map [(meta control \;)] 
+  (define-key js2-mode-map [(meta control \;)]
     '(lambda()
        (interactive)
        (insert "/* -----[ ")
@@ -174,7 +174,7 @@
   (define-key js2-mode-map [(control d)] 'c-electric-delete-forward)
   (define-key js2-mode-map [(control meta q)] 'my-indent-sexp)
   (if (featurep 'js2-highlight-vars)
-    (js2-highlight-vars-mode))
+      (js2-highlight-vars-mode))
   (message "My JS2 hook"))
 
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
@@ -182,7 +182,22 @@
 ; Flymake settings.
 (require 'flymake-jslint)
 (add-hook 'js2-mode-hook
-	  (lambda () (flymake-mode t)))
+          (lambda () (flymake-mode t)))
+
+; Flymake for Python using pyflakes.
+(when (load "flymake" t)
+  (defun flymake-pyflakes-init ()
+    (let* ((temp-file (flymake-init-create-temp-buffer-copy
+                       'flymake-create-temp-inplace))
+           (local-file (file-relative-name
+                        temp-file
+                        (file-name-directory buffer-file-name))))
+      (list "pyflakes" (list local-file))))
+
+  (add-to-list 'flymake-allowed-file-name-masks
+               '("\\.py\\'" flymake-pyflakes-init)))
+
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ; Indent and clean whole buffer ( http://emacsblog.org/2007/01/17/indent-whole-buffer/ ).
 (defun iwb ()
@@ -192,20 +207,21 @@
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
 
+
 ; Right margin.
 ; http://www.emacswiki.org/emacs/MarginMode
 ; http://www.geocities.com/gchen275/xemacs/
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(js2-allow-keywords-as-property-names nil)
  '(js2-indent-on-enter-key nil)
  '(js2-mirror-mode nil))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
