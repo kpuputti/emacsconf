@@ -225,3 +225,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-to-list 'auto-mode-alist '("\\.css\\.dtml$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
