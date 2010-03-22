@@ -228,3 +228,5 @@
 
 (add-to-list 'auto-mode-alist '("\\.css\\.dtml$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
+(setq c-default-style
+      '((java-mode . "java") (other . "cc-mode")))
