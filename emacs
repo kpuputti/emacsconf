@@ -230,3 +230,6 @@
 (add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
 (setq c-default-style
       '((java-mode . "java") (other . "cc-mode")))
+
+(defalias 'qrr 'query-replace-regexp)
+(defalias 'dtr 'delete-trailing-whitespace)
