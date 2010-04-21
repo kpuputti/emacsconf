@@ -1,0 +1,3 @@
+#name : pdb breakpoint
+# --
+import pdb; pdb.set_trace()
