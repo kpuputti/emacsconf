@@ -1,6 +1,6 @@
 #name: test structure for c course
 # --
-#incluce <assert.h>
+#include <assert.h>
 #include <stdio.h>
 
 #include "$1"
