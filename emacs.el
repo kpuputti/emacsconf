@@ -234,3 +234,5 @@
 
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'dtr 'delete-trailing-whitespace)
+
+(setq x-select-enable-clipboard t)
