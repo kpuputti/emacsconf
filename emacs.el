@@ -229,6 +229,9 @@
 (add-to-list 'auto-mode-alist '("\\.css\\.dtml$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
 (add-hook 'latex-mode-hook 'flyspell-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'rst-mode-hook 'flyspell-mode)
+(add-hook 'doctest-mode-hook 'flyspell-mode)
 (setq c-default-style
       '((java-mode . "java") (other . "cc-mode")))
 
