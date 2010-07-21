@@ -228,6 +228,7 @@
 
 (add-to-list 'auto-mode-alist '("\\.css\\.dtml$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.cpt$" . nxml-mode))
 (add-hook 'latex-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'rst-mode-hook 'flyspell-mode)
