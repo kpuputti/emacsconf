@@ -1,0 +1,5 @@
+#name : jQuery ready
+# --
+$(document).ready(function () {
+    $0
+});
