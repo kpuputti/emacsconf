@@ -83,14 +83,11 @@
 (require 'django-mode)
 
 ; Use yasnippet ( http://code.google.com/p/yasnippet/ )
-(add-to-list 'load-path "~/.emacs.d/emacsconf/plugins/yasnippet-0.6.1c")
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas/initialize)
-(yas/load-directory "~/.emacs.d/emacsconf/plugins/yasnippet-0.6.1c/snippets")
 
 ; User defined snippets.
-(setq yas/root-directory "~/.emacs.d/emacsconf/mysnippets")
-(yas/load-directory yas/root-directory)
+(yas/load-directory "~/.emacs.d/emacsconf/mysnippets")
 
 ; Use js2-mode and espresso for Javascript
 ; ( http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode ).
