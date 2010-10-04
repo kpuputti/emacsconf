@@ -1,0 +1,12 @@
+#name: test structure for c course
+# --
+#include <assert.h>
+#include <stdio.h>
+
+#include "$1"
+
+int main(void)
+{
+    puts("-- OK --");
+    return 0;
+}

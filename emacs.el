@@ -223,9 +223,22 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'auto-mode-alist '("\\.css\\.dtml$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.css.dtml$" . css-mode))
 (add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.cpt$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.zcml$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . nxml-mode))
+
+(add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.rdf$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.owl$" . nxml-mode))
+
+(setq magic-mode-alist nil)
+
 (add-hook 'latex-mode-hook 'flyspell-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'rst-mode-hook 'flyspell-mode)
+(add-hook 'doctest-mode-hook 'flyspell-mode)
 (setq c-default-style
       '((java-mode . "java") (other . "cc-mode")))
 
