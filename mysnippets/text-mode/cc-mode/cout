@@ -1,0 +1,3 @@
+#name: std::cout print
+# --
+std::cout << "$1" << std::endl;

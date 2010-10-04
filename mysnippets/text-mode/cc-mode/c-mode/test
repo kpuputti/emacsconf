@@ -1,11 +1,12 @@
 #name: test structure for c course
 # --
 #include <assert.h>
-#include <iostream>
+#include <stdio.h>
 
 #include "$1"
 
-int main()
+int main(void)
 {
-    std::cout << "-- OK --" << std::endl;
+    puts("-- OK --");
+    return 0;
 }
