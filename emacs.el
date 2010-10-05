@@ -46,6 +46,9 @@
 (ido-mode t)
 (setq ido-enable-flex-matching t)
 
+; Enable uniquify for buffer names.
+(require 'uniquify)
+
 ; Show full file path on the title bar
 ; ( http://www.nabble.com/How-to-full-pathname-in-modeline-td21749423.html ).
 (setq-default frame-title-format
@@ -96,7 +99,7 @@
 
 ; Use js2-mode and espresso for Javascript
 ; ( http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode ).
-(autoload 'js2-mode "js2-mode" nil t)
+(autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (autoload 'espresso-mode "espresso")
 
@@ -214,18 +217,19 @@
 ; http://www.emacswiki.org/emacs/MarginMode
 ; http://www.geocities.com/gchen275/xemacs/
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(js2-allow-keywords-as-property-names nil)
  '(js2-indent-on-enter-key nil)
- '(js2-mirror-mode nil))
+ '(js2-mirror-mode nil)
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify)))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  )
 
 (add-to-list 'auto-mode-alist '("\\.css.dtml$" . css-mode))
