@@ -185,9 +185,11 @@
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
 ; Flymake settings.
+(require 'flymake)
+
 (require 'flymake-jslint)
 (add-hook 'js2-mode-hook
-          (lambda () (flymake-mode t)))
+          (lambda () (flymake-mode 1)))
 
 ; Flymake for Python using pyflakes.
 (when (load "flymake" t)

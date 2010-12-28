@@ -1,12 +1,10 @@
-(require 'flymake)
-
 (defun flymake-jslint-init ()
   (let* ((temp-file (flymake-init-create-temp-buffer-copy
 		     'flymake-create-temp-inplace))
          (local-file (file-relative-name
 		      temp-file
 		      (file-name-directory buffer-file-name))))
-    (list "rhino" (list (expand-file-name "~/programs/jslint/rhino/jslint.js") local-file))))
+    (list "rhino" (list (expand-file-name "~/programs/rhino/jslint.js") local-file))))
 
 (setq flymake-allowed-file-name-masks
       (cons '(".+\\.js$"
