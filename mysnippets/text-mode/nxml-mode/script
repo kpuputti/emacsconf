@@ -1,3 +1,5 @@
-#name : <script type="text/javascript" src="...">...</script>
+#name : <script type="text/javascript">...</script>
 # --
-<script type="text/javascript" src="$1"></script>
+<script type="text/javascript">
+  $1
+</script>
