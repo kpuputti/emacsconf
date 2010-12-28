@@ -4,7 +4,7 @@
          (local-file (file-relative-name
 		      temp-file
 		      (file-name-directory buffer-file-name))))
-    (list "rhino" (list (expand-file-name "~/programs/rhino/jslint.js") local-file))))
+    (list "rhino" (list (expand-file-name "~/.emacs.d/emacsconf/jslint.js") local-file))))
 
 (setq flymake-allowed-file-name-masks
       (cons '(".+\\.js$"
