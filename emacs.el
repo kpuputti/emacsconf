@@ -14,6 +14,7 @@
 
 ; Set the color theme.
 (require 'color-theme)
+(color-theme-initialize)
 (setq color-theme-is-global t)
 (color-theme-simple-1)
 
