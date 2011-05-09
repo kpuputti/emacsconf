@@ -8,7 +8,7 @@
 ;;;      ruby stable snapshot - Wed Nov 24 04:01:06 JST 2004
 ;;;
 
-(defconst groovy-mode-revision "$Revision$")
+(defconst groovy-mode-revision "4337")
 
 (defconst groovy-mode-version
   (progn
