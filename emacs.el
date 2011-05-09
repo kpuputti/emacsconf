@@ -254,6 +254,14 @@
 (setq c-default-style
       '((java-mode . "java") (other . "cc-mode")))
 
+(autoload 'groovy-mode "groovy-mode" "Groovy editing mode." t)
+(add-to-list 'auto-mode-alist '("\.groovy$" . groovy-mode))
+(add-to-list 'interpreter-mode-alist '("groovy" . groovy-mode))
+
+(defun force-tab-indent ()
+  (interactive)
+  (setq indent-tabs-mode t))
+
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'dtr 'delete-trailing-whitespace)
 
