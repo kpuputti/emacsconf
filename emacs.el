@@ -9,6 +9,9 @@
 ; Add custom directory to load path.
 (add-to-list 'load-path "~/.emacs.d/emacsconf/plugins")
 
+; Confirm quit
+(setq confirm-kill-emacs 'y-or-n-p)
+
 ; Set default font size.
 (set-face-attribute 'default nil :height 100)
 
@@ -89,7 +92,7 @@
 (setq cssm-mirror-mode nil)
 
 ; Load mode for Django templates ( http://code.djangoproject.com/wiki/Emacs )
-(require 'django-mode)
+(autoload 'django-mode "django-mode")
 
 ; Use yasnippet ( http://code.google.com/p/yasnippet/ )
 (require 'yasnippet) ;; not yasnippet-bundle
@@ -235,11 +238,16 @@
   ;; If there is more than one, they won't work right.
  )
 
+; SCSS mode
+(autoload 'scss-mode "scss-mode")
+(setq scss-compile-at-save nil)
+
 (add-to-list 'auto-mode-alist '("\\.css.dtml$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
 (add-to-list 'auto-mode-alist '("\\.pt$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.cpt$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.zcml$" . nxml-mode))
-(add-to-list 'auto-mode-alist '("\\.html$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("\\.html$" . html-mode))
 
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\\.rdf$" . nxml-mode))
