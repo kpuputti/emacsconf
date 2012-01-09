@@ -1,0 +1,9 @@
+#name: \begin{figure} ... \end{figure}
+# --
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=\textwidth]{images/${1:image}}
+    \caption{$0}
+    \label{figure:$1}
+  \end{center}
+\end{figure}
