@@ -191,7 +191,7 @@
 ; Flymake settings.
 (require 'flymake)
 
-(require 'flymake-jslint)
+;(require 'flymake-jslint)
 ;(add-hook 'js2-mode-hook
 ;          (lambda () (flymake-mode 1)))
 
